@@ -46,14 +46,14 @@ public class ContactManager {
         switch (integer){
             case 1:{
                 Contact removeContact = new Contact(name);
-                System.out.println(name + " has been successfully removed from your work contact directory.");
                 workContacts.removeContact(removeContact);
+                System.out.println(name + " has been successfully removed from your work contact directory.");
                 break;
             }
             case 2: {
                 Contact removeContact = new Contact(name);
-                System.out.println(name + " has been successfully removed from your personal contact directory.");
                 personalContacts.removeContact(removeContact);
+                System.out.println(name + " has been successfully removed from your personal contact directory.");
                 break;
             }
             default: {
@@ -83,16 +83,16 @@ public class ContactManager {
     public void searchContacts(int integer, String name){
         switch (integer){
             case 1:{
-                //find work contact using name input
+                Contact searchContact = new Contact(name);
                 System.out.println("Here are the contact details for " + name + " from your work contact directory.");
-                //print out details for contact
+                workContacts.searchContacts(searchContact);
                 break;
 
             }
             case 2: {
-                //find personal contact using name input
+                Contact searchContact = new Contact(name);
                 System.out.println("Here are the contact details for " + name + " from your personal contact directory.");
-                //print out details for contact
+                personalContacts.searchContacts(searchContact);
                 break;
             }
             default: {

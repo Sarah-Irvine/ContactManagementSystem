@@ -2,7 +2,6 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class AbstractContactCategory  implements ContactCategory {
 
@@ -26,8 +25,10 @@ public class AbstractContactCategory  implements ContactCategory {
 
     }
 
-    @Override
-    public void searchContacts() {
+    public void searchContacts(Contact contact) {
+
+        List<Contact> filteredSearchList = contacts.stream().filter(c -> c.getName().equalsIgnoreCase(contact.getName())).toList();
+        System.out.println(filteredSearchList);
 
     }
 

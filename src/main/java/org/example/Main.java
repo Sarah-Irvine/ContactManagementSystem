@@ -53,7 +53,7 @@ public class Main {
                 contactScanner.nextLine();
                 messageToScreen.contactToSearch();
                 String choice4Name = contactScanner.nextLine();
-                contactManager.searchContacts(choice4, choice4Name); //create method to do this
+                contactManager.searchContacts(choice4, choice4Name); 
 
                 messageToScreen.endMessage();
 

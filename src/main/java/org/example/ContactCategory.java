@@ -8,5 +8,5 @@ public interface ContactCategory {
 
     void viewContacts();
 
-    void searchContacts();
+    void searchContacts(Contact contact);
 }
