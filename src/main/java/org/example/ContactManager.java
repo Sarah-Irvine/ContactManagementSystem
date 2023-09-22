@@ -101,4 +101,15 @@ public class ContactManager {
             }
         }
     }
+
+    public void loadContacts() {
+        personalContacts.load();
+        workContacts.load();
+
+    }
+
+    public void saveContacts(){
+        personalContacts.save();
+        workContacts.save();
+    }
 }
